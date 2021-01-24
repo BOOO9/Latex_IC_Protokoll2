@@ -1,16 +1,26 @@
 
 
 
-\documentclass{article}
+\documentclass[a4paper]{article}
 \usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{watermark}
+
+
+\thiswatermark{\put(-129,-748){\includegraphics[scale=0.506]{Image/Titelblatt.png}}}
+
+\title{{\huge Übung 2}\\Laborsimulationsprotokoll\\ \large im Studiengang Mechatronik/Robotik (Bachelor) Lehrveranstaltung IC-Übung}
+\date{Begutachter: Dr. Moritz Lang \\ WS2020}
+\author{Caspar J.F. Conradi (mr19b041) \and Tobias Grill (mr19b026)}
 
 
 \begin{document}
 
+    \maketitle
+    \pagenumbering{gobble}
+    \newpage
+    \pagenumbering{arabic}
 
-    \begin{figure}[h!] %das [h!] macht das das Foto auch wkl an der richtigen Stelle ist
-		\includegraphics[width=\linewidth]{Titelblatt.png}
-	\end{figure}
     
     %titelblatt & Diskussion -> Caspar
     %Spielelogik, Schaltplan, Funktionen -> Grili
@@ -20,7 +30,8 @@
     \section{Schaltplan}    %Screenshots von Matlab und beschreiben?
     \section{Funktion der Programmteile} %Tabellen?
     \section{Diskussion}
-    
+    \blindtext
+    \blindtext
     
     
 
