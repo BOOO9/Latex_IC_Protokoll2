@@ -25,23 +25,8 @@
     \maketitle
     \pagenumbering{gobble}
     \newpage
+
     \pagenumbering{arabic}
-
-
-    %titelblatt & Diskussion -> Caspar
-    %Spielelogik, Schaltplan, Funktionen -> Grill
-
-    
-    \begin{figure}[h!] %das [h!] macht das das Foto auch wkl an der richtigen Stelle ist
-		\includegraphics[width=\linewidth]{Image/Titelblatt.png}
-	\end{figure}
-
-    
-    %titelblatt & Diskussion -> Caspar
-    %Spielelogik, Schaltplan, Funktionen -> Grilli
-
-
-    \newpage
     \tableofcontents
     \newpage
 
@@ -112,9 +97,10 @@
     \section{Diskussion}
 
     Wie bereits erwähnt wurde in der ersten Teilaufgabe die Programmiersprache für den Objektbaustein \textit{Simulation} verwechselt. Statt \textbf{FUP} wurde \textbf{KOP} verwendet. Da es sich hier bei beiden um visuelle Programmiersprache handelt die an elektrische Schaltpläne angelehnt sind ist der Unterschied zwischen diesen zwei Sprachen nicht sehr groß. Da der Weckalarm-OB relativ simpel gehalten ist also mit wenigen Variablen und Funktionen ist der KOP-Schaltplan hier relativ schnell und einfach zu erstellen und später zu überblicken. Wenn hier noch kompliziertere Schaltungen vorgenommen werden wäre es sicher klug die geforderte Programmiersprache FUP zu wählen da es hier einige Funktionen gibt die man sich mit KOP "ausborgen" müsste. \\ 
-    Der in dem OB aufgerufene Funktionsbaustein \textit{Pong Mode} wurde in der Sprache SCL implementiert. Da hier dann auch in den weiteren Teilübungen mit der manuellen Steuerung der Schalter einige If-Abfragen durchgeführt werden müssen ist die Hochsprachen ähnliche \textbf{Structured Control Language} hier leicht argumentierbar. Die langen Variablen Namen durch die PLC-Datentypen machen diese Abfragen nicht gerade übersichtlicher dafür können mit einfacher Syntax diese Werte manipuliert und verglichen werden. \\ Dass dann in der Teilübung \textit{Visualize} wieder die Sprache FUP gefordert wurde ist aus pragmatischer Sicht nicht sehr konsistent. Für spätere Arbeiten wäre es vermutlich einfacher wenn die komplexeren Funktionen bzw. Funktionsbaustein in der selben Programmiersprache geschrieben werden. Bei der \textit{Visualize} Funktion könnte ebenfalls die SCL Sprache gut verwendet werden da hier der Umgang mit Arrays und For/While-Schleifen bereits aus anderen Programmiersprachen bekannt ist. Ein ehemaliger Elektriker der bereits viel mit Schaltplänen gearbeitet hat würde vermutlich  FUP bevorzugen.
+    Der in dem OB aufgerufene Funktionsbaustein \textit{Pong Mode} wurde in der Sprache SCL implementiert. Da hier dann auch in den weiteren Teilübungen mit der manuellen Steuerung der Schalter einige If-Abfragen durchgeführt werden müssen ist die Hochsprachen ähnliche \textbf{Structured Control Language} hier leicht argumentierbar. Die langen Variablen Namen durch die PLC-Datentypen machen diese Abfragen nicht gerade übersichtlicher dafür können mit einfacher Syntax diese Werte manipuliert und verglichen werden. \\ Dass dann in der Teilübung \textit{Visualize} wieder die Sprache FUP gefordert wurde ist aus pragmatischer Sicht nicht sehr konsistent. Für spätere Arbeiten wäre es vermutlich einfacher wenn die komplexeren Funktionen bzw. Funktionsbaustein in der selben Programmiersprache geschrieben werden. Bei der \textit{Visualize} Funktion könnte ebenfalls die SCL Sprache gut verwendet werden da hier der Umgang mit Arrays und For/While-Schleifen bereits aus anderen Programmiersprachen bekannt ist. Ein ehemaliger Elektriker der bereits viel mit Schaltplänen gearbeitet hat würde vermutlich  FUP bevorzugen. \\
+    Die \textit{Visualize} Funktion wurde wie angegeben als Bibliothekskonforme Funktion programmiert. Sie hat also keinen Zugriff auf globale Variablen und Konstanten und kann auch keine Werte zwischenspeichern. Alle Werte mit denen diese Funktion arbeitet müssen ihr also über Eingangsparameter übergeben werden. Auf diese Art und Weiße zu arbeiten ist bereits aus der C-Programmierung bekannt in der man auch \textit{Libraries} verwenden kann die einzig und alleine mit Eingangsparametern arbeiten und dann einen neuen \textit{return-  value} zurückgeben. So zu Arbeiten hatte in dieser Aufgabe natürlich den Hauptgrund, dass man dieses Konzept kennenlernt und weiß was "Bibliothekskonform" in diesem Zusamenhang bedeutet. Ähnlich wie in C macht es aber später durchaus viel Sinn komplexere Funktionen bibliothekskonform zu programmieren um bei späteren Projekten wieder auf diese Arbeit zurückgreifen kann und nicht wieder alles von neuem Programmieren muss. \\
+    In den weiteren Teilaufgaben die aber aufgrund von Zeitmangel nicht durchgeführt werden konnten hätte man die Programmiersprache \textit{Graph} oder auch \textit{Schrittkette} (in anderen Programmen \textit{Ablaufsteuerung}) verwenden sollen. In dieser Graphischen Programmiersprache werden einzelne Schritte programmiert die entweder der Reihe nach oder auch in unterschiedlicher Reihenfolge abgearbeitet werden. Es gibt dabei immer einen aktiven Schritt (am Anfang der Initialschritt). Dieser SChritt ist der aktuelle der gerade eine Bestimmte Aufgabe ausführt. Zum Beispiel das pausierte Spiel. Mit der Transistionsbedingung (Spieler drückt Taster) kann dann zu einem nächsten Schritt übergegangen werden. Am Ende der Ablaufkette befindet sich dann ein Sprung zu entweder einem anderen Funktionsbaustein oder auch zurück zum Anfang der Ablaufkette. Dadurch, dass jeder Schritt einzeln programmiert werden kann und dann aber nur als Schritt dargestellt wird können so etwa komplexe automatische Maschinenabläufe relativ übersichtlich verbildlicht werden. 
 
-    \newpage
     \listoffigures
     \listoftables
 
