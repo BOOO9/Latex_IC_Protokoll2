@@ -7,6 +7,7 @@
 \usepackage{ltxtable}
 \usepackage{float}
 \selectlanguage{german}
+%\selectlanguage{english}
 
 
 \thiswatermark{\put(-129,-748){\includegraphics[scale=0.506]{Image/Titelblatt.png}}}
@@ -76,7 +77,7 @@
     
      \begin{figure}[H]
          \includegraphics[width=\linewidth]{Image/Schaltplan.PNG}
-         \caption{Schaltplan}
+         \caption{Schaltplan aus MatLab}
      \end{figure}
 
      Wird der Taster S1 betätigt, und somit ein Signal am Eingang I0.0 gelegt, wird der Ball vom linken Spieler angenommen. Analog dazu ist der Taster S2 am Eingang I0.1 für den rechten Spieler.\\
@@ -105,16 +106,16 @@
         \end{center}
       \end{table}
 
-      Die Teilaufgaben 1 bis 3 funktionieren gemäß der Anforderungen. Wobei bei Teilaufgabe 3 bei einer nicht Annahme des Balles, kurzzeitig keine LED aufleuchtet, um besser zu erkennen ob der Ball angenommen wurde oder nicht.\\
-      für die Aufgaben 4 und 5 reichte uns die Übungszeit nicht aus um diese zu implementieren.
+      Die Teilaufgaben 1 bis 3 funktionieren gemäß der Anforderungen wobei in der Teilaufgabe 1 der \textit{Weckalarm-OB} nicht wie gefordert in der Programmiersprache \textbf{FUP} sondern fälschlicherweise mit \textbf{KOP} erstellt wurde. In Teilaufgabe 3 wurde noch ein zusätzliches Feature eingebaut, sodass bei einer nicht Annahme des Balles, kurzzeitig keine LED aufleuchtet, um besser zu erkennen ob der Ball angenommen wurde oder nicht.\\
+      Für die Aufgaben 4 und 5 reichte die Übungszeit nicht aus um diese zu implementieren.
 
     \section{Diskussion}
 
-    \blindtext
-    \blindtext
-    
+    Wie bereits erwähnt wurde in der ersten Teilaufgabe die Programmiersprache für den Objektbaustein \textit{Simulation} verwechselt. Statt \textbf{FUP} wurde \textbf{KOP} verwendet. Da es sich hier bei beiden um visuelle Programmiersprache handelt die an elektrische Schaltpläne angelehnt sind ist der Unterschied zwischen diesen zwei Sprachen nicht sehr groß. Da der Weckalarm-OB relativ simpel gehalten ist also mit wenigen Variablen und Funktionen ist der KOP-Schaltplan hier relativ schnell und einfach zu erstellen und später zu überblicken. Wenn hier noch kompliziertere Schaltungen vorgenommen werden wäre es sicher klug die geforderte Programmiersprache FUP zu wählen da es hier einige Funktionen gibt die man sich mit KOP "ausborgen" müsste. \\ 
+    Der in dem OB aufgerufene Funktionsbaustein \textit{Pong Mode} wurde in der Sprache SCL implementiert. Da hier dann auch in den weiteren Teilübungen mit der manuellen Steuerung der Schalter einige If-Abfragen durchgeführt werden müssen ist die Hochsprachen ähnliche \textbf{Structured Control Language} hier leicht argumentierbar. Die langen Variablen Namen durch die PLC-Datentypen machen diese Abfragen nicht gerade übersichtlicher dafür können mit einfacher Syntax diese Werte manipuliert und verglichen werden. \\ Dass dann in der Teilübung \textit{Visualize} wieder die Sprache FUP gefordert wurde ist aus pragmatischer Sicht nicht sehr konsistent. Für spätere Arbeiten wäre es vermutlich einfacher wenn die komplexeren Funktionen bzw. Funktionsbaustein in der selben Programmiersprache geschrieben werden. Bei der \textit{Visualize} Funktion könnte ebenfalls die SCL Sprache gut verwendet werden da hier der Umgang mit Arrays und For/While-Schleifen bereits aus anderen Programmiersprachen bekannt ist. Ein ehemaliger Elektriker der bereits viel mit Schaltplänen gearbeitet hat würde vermutlich  FUP bevorzugen.
 
     \newpage
     \listoffigures
     \listoftables
+
 \end{document}
